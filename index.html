@@ -11,21 +11,23 @@
       <div class="container-1600">
         <div clas="row">
           <div clas="col-12">
-            <p>{{ info.data.chartName }}</p>
+            <p class="text-center asset-name">{{ info.data.chartName }}</p>
           </div>
 
           <div clas="col-12">
-            <p>{{ info.data.bpi.USD.code }} ${{ info.data.bpi.USD.rate_float | currencydecimal }}</p>
+            <p class="asset-cost">${{ info.data.bpi.USD.rate_float | currencydecimal }} <small>{{ info.data.bpi.USD.code }}</small></p>
           </div>
 
           <div clas="col-12">
-            <p>Lasted updated: {{ info.data.time.updateduk }}</p>
+            <p class="last-updated-price">Lasted updated: {{ info.data.time.updateduk }}</p>
           </div>
         </div>
       </div>
     </div>
     <!-- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
+    <script src="https://unpkg.com/vue-cookies@1.5.12/vue-cookies.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="index.js"></script>
   </body>
